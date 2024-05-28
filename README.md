@@ -65,6 +65,29 @@ You can build City3D from the source code˙
 
   Don't have any experience with C/C++ programming? Then check this <a href="https://github.com/LiangliangNan/Easy3D/blob/main/HowToBuild.md">How to build</a> I wrote for [Easy3D](https://github.com/LiangliangNan/Easy3D).
 
+### Docker
+
+You can also use Docker to build and run City3D. The [Dockerfile](Dockerfile) is provided.
+
+To build the Docker image, run the following command in the root directory of City3D:
+
+```
+$ docker build -t city3d .
+```
+
+To run the Docker container, use the following command:
+
+```
+$ docker run -it city3d /bin/bash
+$ cd bin
+./CLI_Example_1
+loading input point cloud data...
+loading input footprint data...
+segmenting individual buildings...
+extracting roof planes...
+reconstructing the buildings (using the SCIP solver)...
+```
+
 ### Run City3D
 
 This repository includes three executable programs:
